@@ -1,33 +1,58 @@
-img {
-  width: 50%;
-
+body {
+  margin-left: 10px;
 }
-
+h3 {
+  margin-top: 10px;
+  font-weight: 300;
+}
+p#img {
+  margin-left: 30pt;
+  text-align: left;
+}
+img {
+  margin-left: 10pt;
+  max-width:50%
+}
 #show-lists {
   display: none;
 }
-
-/*#tasks li{
-  cursor: pointer;
-  color: blue;
-}
-
-#tasks:hover li{
-  text-decoration: underline;
-}
-#jobs {
-  cursor: pointer;
-  color: blue;
-}
-
-#jobs:hover {
-  text-decoration: underline;
-}*/
 li {
   cursor: pointer;
-  color: blue;
+  color: #2098D1;
+  font-size: 14pt;
+  margin-left: 20px;
 }
 li:hover {
   text-decoration: underline;
 
+}
+#tasks-grow, #jobs-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+#tasks-grow li:hover,
+#tasks-grow li:focus,
+#tasks-grow li:active,
+#jobs-grow li:hover,
+#jobs-grow li:focus,
+#jobs-grow li:active {
+    transform: scale(1.1);
+}
+.inputLegend {
+  font-style: italic;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-size: 10pt;
 }

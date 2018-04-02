@@ -19,31 +19,29 @@ $(document).ready(function() {
   $("form#todolists").submit(function(event) {
 
     event.preventDefault();
-    userInput = $("input#lists").val().toLowerCase();
+    userInput = $("input#lists").val();
     category = $("input#category").val().toLowerCase();
 
     var todo = new todoLists(userInput,category);
 
 
     // append the list to the screen on col 1
-    $("ul#tasks").append("<li>" + userInput + "</li>");
+    $("ul#tasks-grow").append("<li>" + userInput + "</li>");
     $("#show-lists").show();
 
     // append output to the screen on col 2
-    $("ul#tasks li").last().click(function() {
+    $("ul#tasks-grow li").last().click(function() {
 
       $(".tasks").show();
       //$("ul#jobs").empty();
 
 
-      $("ul#jobs").append("<li class=\"remove\">" +  todo.getTask().charAt(0).toUpperCase() + todo.getTask().slice(1,todo.getTask().length) + " : " + todo.Check()  + "</li>") ;
+      $("ul#jobs-grow").append("<li class=\"remove\">" + todo.getTask().charAt(0).toUpperCase() + todo.getTask().slice(1,todo.getTask().length) + " : " + todo.Check()  + "</li>") ;
 
       $(".remove").click(function() {
         $(this).remove();
-      })
+      });
     });
-
-
 
 
   });

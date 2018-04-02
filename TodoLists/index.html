@@ -7,63 +7,62 @@
   <head>
     <meta charset="utf-8">
     <link rel="icon" href="http://freevector.co/wp-content/uploads/2009/01/46442-tasks-list-on-clipboard.png">
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/hover.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
     <title>TodoLists Apps</title>
+    <div class="footer">
+      <p>© Rio Atmadja and Andrew Lupton</p>
+    </div>
   </head>
   <body>
-
-    <div class="container">
+    <div class="container-fluid">
       <br>
-      <h1>Alexa</h1>
+      <h1 id="header1" class="display-1"><em>Alexa:</em></h1>
 
       <!-- row -->
       <div class="row">
-
         <!-- column 1 -->
-
-        <div class="col-6">
+        <div class="col-6" id="inputColumn">
           <form id="todolists">
-            <div class="form-group">
+            <h3 class="display-5"><em>To-Do List Application</em></h3>
 
-              <label for="todolists">Please Input your todo lists</label>
-              <input type="text" class="form-control" id="lists">
+            <div class="form-group">
+              <label for="todolists" class="inputLegend">Please input your to-do items</label>
+              <input type="text" class="form-control" id="lists" placeholder="Item:">
             </div>
 
             <div class="form-group">
-              <label for="todolists">Mark as (Done or Inprogress)</label>
-              <input type="text" id="category" class="form-control">
+              <label for="todolists" class="inputLegend">Mark as "Done" or
+              "Inprogress"</label>
+              <input type="text" id="category" class="form-control" placeholder="Progress:">
             </div>
-            <button type="submit" name="button">Create</button>
+
+            <button class="btn btn-info" type="submit" name="button">Create</button>
           </form>
 
           <div id="show-lists">
             <div>
-              <h3>Lists:</h3>
-              <ul id="tasks">
+              <h3 class="Display-5"><em>To-Do:</em></h3>
+              <ul class="list-group list-group-flush" id="tasks-grow">
 
               </ul>
             </div>
           </div>
         </div>
-
-
         <!-- column 2 -->
-        <div class="col-6">
-          <img src="https://i.pinimg.com/originals/71/fb/6e/71fb6e3823cff5a29a8883e83c16382a.jpg" alt="alexa">
-          <p><b><em>Alexa:</em></b> Your Wish is my command</p>
+        <div class="col-6" id="imgColumn">
+          <img src="https://i.pinimg.com/originals/71/fb/6e/71fb6e3823cff5a29a8883e83c16382a.jpg" alt="alexa" class="rounded-circle">
+          <p id="img"><b><em>Alexa:</em></b> Your wish is my command!</p>
           <div class="tasks">
-            <ul id="jobs">
+            <ul class="list-group list-group-flush" id="jobs-grow">
 
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <ul>
-      
-    </ul>
   </body>
 </html>
