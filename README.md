@@ -4,19 +4,18 @@
 #### Date: 2 April 2018
 
 ##### Description
-_This web application that user inputs, creates an object, appends that object to a list, appends a second list from a second click function, and then removes list elements as the user clicks on them.:_
+_This web application takes user input, creates an object, appends that object to a list, appends a second list from a click function, and then removes list elements with a second click function._
 -
 
 ##### Project Links
 _link_ https://github.com/g0tmilk/TodoLists
+_link_ https://github.com/aflupton/todo-list-project
 ##### Setup/Installation Requirements
 *  CSS Boostrap CDN
 *  HTML 5
 *  JQuery CDN
-*  Clone from repository and then open in browser.
+*  Clone from Github repository and then open in Chrome browser.
 
-##### Specifications
- *
 ##### Known Bugs
 _So far there are no bugs_
 
