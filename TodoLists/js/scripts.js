@@ -3,11 +3,14 @@ function todoLists(task,category) {
   this.category = category;
 }
 
+todoLists.prototype.getTask = function() {
+  return this.task;
+}
 todoLists.prototype.Check = function() {
   if(this.category === "done") {
-    return "Done";
+    return "Done &#9989";
   } else {
-    return "InProgress";
+    return "InProgress &#10008";
   }
 }
 $(document).ready(function() {
@@ -20,17 +23,28 @@ $(document).ready(function() {
     category = $("input#category").val().toLowerCase();
 
     var todo = new todoLists(userInput,category);
-    alert(todo.Check());
+
 
     // append the list to the screen on col 1
     $("ul#tasks").append("<li>" + userInput + "</li>");
     $("#show-lists").show();
 
     // append output to the screen on col 2
-    $("tasks").last().click(function() {
+    $("ul#tasks li").last().click(function() {
+
       $(".tasks").show();
-      $("ul#jobs").append("<li>" + todo.Check() + "</li>");
+      //$("ul#jobs").empty();
+
+
+      $("ul#jobs").append("<li class=\"remove\">" +  todo.getTask().charAt(0).toUpperCase() + todo.getTask().slice(1,todo.getTask().length) + " : " + todo.Check()  + "</li>") ;
+
+      $(".remove").click(function() {
+        $(this).remove();
+      })
     });
+
+
+
 
   });
 
